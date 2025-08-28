@@ -19,7 +19,8 @@ jobs:
           ref: dev
 
       - name: Attempt fast-forward merge
-        run: git merge --ff-only origin/main || echo "No fast-forward possible."
+        run: git merge --ff-only origin/main
+        #|| echo "No fast-forward possible."
 
       - name: Push changes
         run: git push
